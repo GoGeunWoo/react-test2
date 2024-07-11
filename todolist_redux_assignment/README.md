@@ -20,7 +20,7 @@ const onSubmitHandler = (event) => {
 
 
 ## 2. 추가하기 버튼 클릭 후 기존에 존재하던 아이템들이 사라짐.  
-추가하기 버튼 액션을 하면 기존에 있던 할 일 목록에 추가되지 않는것 같아 기존에 있던 목록에서 추가 될 수 있도록 다음과 같은 코드를 modules/ todos.js 파일에 추가 하였습니다.
+<!-- 추가하기 버튼 액션을 하면 기존에 있던 할 일 목록에 추가되지 않는것 같아 기존에 있던 목록에서 추가 될 수 있도록 다음과 같은 코드를 modules/ todos.js 파일에 추가 하였습니다.
 case ADD_TODO:
       return {
         ...state,
@@ -32,11 +32,11 @@ case ADD_TODO:
         ...state,
         todos: [...state.todos, action.payload],
       };
-이렇게 ...state.todos에 추가 하였습니다.
+이렇게 ...state.todos에 추가 하였습니다. -->
 
 
 ## 3. 삭제 기능이 동작하지 않음. 
-redux/ modules/ todos.js 파일에서
+<!-- redux/ modules/ todos.js 파일에서
 const todos = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO:
@@ -52,7 +52,7 @@ case DELETE_TODO:
       return {
         ...state,
         todos: state.todos.filter((todo) => todo.id !== action.payload),
-      };
+      }; -->
 
 
 
@@ -67,7 +67,7 @@ useEffect(() => {
 
 ## 5. 완료된 카드의 상세 페이지에 진입 하였을 때 올바른 데이터를 불러오지 못함. 
 
-<h2 className="list-title">Done..! 🎉</h2>
+<!-- <h2 className="list-title">Done..! 🎉</h2>
       <StListWrapper>
         {todos.map((todo, index) => {
           if (todo.isDone) {
@@ -87,11 +87,11 @@ useEffect(() => {
               <StTodoContainer key={todo.id}>
                   <StLink to={`/${todo.id}`}>
                   <div>상세보기</div>
-                </StLink>
+                </StLink> -->
 
 
 ## 6. 취소 버튼 클릭시 기능이 작동하지 않음.
-<h2 className="list-title">Done..! 🎉</h2>
+<!-- <h2 className="list-title">Done..! 🎉</h2>
 ...
 중략
 ...
@@ -114,4 +114,4 @@ useEffect(() => {
 
 이 코드에서 onClick={onToggleStatusTodo} 코드가 함수 지정이 되지 않은 것 같아서 다음과 같이 코드를 수정 하였습니다. 
 
-onClick={() => onToggleStatusTodo(todo.id)} 
+onClick={() => onToggleStatusTodo(todo.id)}  -->
